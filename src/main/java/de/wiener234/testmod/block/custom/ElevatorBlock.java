@@ -52,7 +52,7 @@ public class ElevatorBlock extends Block {
 
     private Block blockBelow(Level level, BlockPos pos, BlockState blockState){
 
-        for(int i = 1; i <= pos.getY() + 64; i++){
+        for(int i = 1; i <= 390; i++){
             if(isElevatorBlock(level.getBlockState(pos.below(i)).getBlock(), blockState)) {
                 _blockPosYdown = i;
                 return level.getBlockState(pos.below(i)).getBlock();
@@ -64,7 +64,7 @@ public class ElevatorBlock extends Block {
 
     private Block blockAbove(Level level, BlockPos pos, BlockState blockState){
 
-        for(int i =1; i <= 256 ; i++){
+        for(int i =1; i <= 390 ; i++){
             if(isElevatorBlock(level.getBlockState(pos.above(i)).getBlock(), blockState)) {
                 LOGGER.info(level.getBlockState(pos.above(i)).getBlock());
                 _blockPosYup = i;

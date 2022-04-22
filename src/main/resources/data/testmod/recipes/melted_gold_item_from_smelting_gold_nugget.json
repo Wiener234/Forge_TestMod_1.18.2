@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:gold_nugget"
+  },
+  "result": "testmod:melted_gold_item",
+  "experience": 0.7,
+  "cookingtime": 200
+}

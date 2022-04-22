@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "testmod:melted_gold_item"
+    },
+    {
+      "item": "testmod:hammer_item"
+    }
+  ],
+  "result": {
+    "item": "testmod:coin_item"
+  }
+}

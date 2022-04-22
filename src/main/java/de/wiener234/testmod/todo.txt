@@ -1,2 +1,5 @@
 //TODO make gold nuggets into a currency
+    - melted gold to coin with anvil and hammer
+    - bank block and intervace
+    -
 
