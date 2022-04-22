@@ -3,6 +3,7 @@ package de.wiener234.testmod.block.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -25,7 +26,7 @@ public class ElevatorBlock extends Block {
     @Override
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
 
-        if (blockBelow(pLevel, pPos, pState) != null && pEntity.isCrouching()) {
+        if (blockBelow(pLevel, pPos, pState) != null && pEntity.isCrouching() && pEntity instanceof Player) {
             pEntity.setPos(pPos.getX() + .5, pPos.getY() + 1 - _blockPosYdown, pPos.getZ() + .5);
         }
 
@@ -37,7 +38,7 @@ public class ElevatorBlock extends Block {
 
         LOGGER.info(pPos.getY() + _blockPosYup);
 
-        if (blockAbove(pLevel, pPos, pState) != null) {
+        if (blockAbove(pLevel, pPos, pState) != null && pEntity instanceof Player) {
             pEntity.setPos(pPos.getX() + .5, pPos.getY() + 1 + _blockPosYup, pPos.getZ() + .5);
         }
 

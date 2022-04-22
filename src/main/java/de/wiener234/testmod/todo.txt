@@ -1,3 +1,2 @@
 //TODO make gold nuggets into a currency
 
-//TODO elevator block
