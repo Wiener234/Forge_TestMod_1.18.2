@@ -4,6 +4,7 @@
 
   "block.testmod.test_block": "Test Block",
   "block.testmod.elevator_block": "Elevator",
+  "block.testmod.coin_table": "Coin Table",
 
   "itemGroup.testtab": "Test Tab"
 }

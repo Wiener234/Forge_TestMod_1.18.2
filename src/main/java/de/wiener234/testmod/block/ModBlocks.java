@@ -1,6 +1,7 @@
 package de.wiener234.testmod.block;
 
 import de.wiener234.testmod.Testmod;
+import de.wiener234.testmod.block.custom.CoinTable;
 import de.wiener234.testmod.block.custom.ElevatorBlock;
 import de.wiener234.testmod.item.ModCreativeModeTab;
 import de.wiener234.testmod.item.ModItems;
@@ -8,6 +9,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -28,6 +30,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ELEVATOR_BLOCK = registerBlock("elevator_block",
             ()-> new ElevatorBlock(BlockBehaviour.Properties.of(Material.METAL).strength(7f)), ModCreativeModeTab.TEST_TAB);
+
+    public static final RegistryObject<Block> COIN_TABLE = registerBlock("coin_table",
+            ()-> new CoinTable(BlockBehaviour.Properties.copy(Blocks.ANVIL).strength(7f)), ModCreativeModeTab.TEST_TAB);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
