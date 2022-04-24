@@ -6,4 +6,5 @@
 
 //FIXME
     - CoinTanble -> use -> entity returns null
+    - remove client-side check maybe 
 
